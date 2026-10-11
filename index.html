@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="fav.svg">
+  <title>NEON DASH</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <canvas id="game"></canvas>
+
+  <div class="hud">
+    <div class="hud-item">
+      <div class="hud-label">Score</div>
+      <div class="hud-value" id="score">0</div>
+    </div>
+    <div class="hud-item">
+      <div class="hud-label">Combo</div>
+      <div class="hud-value" id="combo">x1</div>
+    </div>
+    <div class="hud-item">
+      <div class="hud-label">Best</div>
+      <div class="hud-value" id="best">0</div>
+    </div>
+  </div>
+
+  <!-- Start Screen -->
+  <div class="screen" id="startScreen">
+    <div class="title">NEON DASH</div>
+    <div class="subtitle">Survive · Collect · Chain</div>
+    <div class="instructions">
+      Move with <span class="key">WASD</span> or <span class="key">←↑↓→</span> or your <span class="key">MOUSE</span><br>
+      Collect <span style="color:#ffd500">golden orbs</span> to score.<br>
+      Chain pickups quickly to build your <span style="color:#ff2e97">combo multiplier</span>.<br>
+      Dodge the <span style="color:#ff2e97">red hazards</span> — one hit and it's over.
+    </div>
+    <button class="btn" id="startBtn">Begin</button>
+  </div>
+
+  <!-- Game Over Screen -->
+  <div class="screen hidden" id="gameOverScreen">
+    <div class="final-label">Final Score</div>
+    <div class="final-score" id="finalScore">0</div>
+    <div class="new-best hidden" id="newBest">★ New Personal Best ★</div>
+    <button class="btn" id="restartBtn">Play Again</button>
+  </div>
+
+  <div class="mobile-hint">Move mouse or use arrow keys</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
